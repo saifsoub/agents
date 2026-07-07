@@ -1,0 +1,87 @@
+{
+  "name": "gdrive-safety-skill",
+  "version": "1.0.0",
+  "description": "Safe, privacy-preserving Google Drive scanner with unusual behavior detection",
+  "author": "Your Name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/gdrive-safety-skill.git"
+  },
+  "keywords": [
+    "google-drive",
+    "safety",
+    "scanner",
+    "privacy",
+    "audit",
+    "security",
+    "skill"
+  ],
+  "main": "gdrive_safety_skill.md",
+  "bin": {
+    "gdrive-safety": "gdrive_safety_cli.py"
+  },
+  "scripts": {
+    "test": "pytest tests/ -v",
+    "lint": "ruff check .",
+    "format": "black .",
+    "type-check": "mypy gdrive_safety_suite/",
+    "check": "npm run lint && npm run type-check && npm run test",
+    "setup": "pip install -r requirements.txt",
+    "install-skill": "npm install -g ."
+  },
+  "dependencies": {
+    "google-auth-oauthlib": "^1.0.0",
+    "google-auth-httplib2": "^0.2.0",
+    "google-api-python-client": "^2.100.0",
+    "click": "^8.1.0",
+    "colorama": "^0.4.6",
+    "tabulate": "^0.9.0"
+  },
+  "devDependencies": {
+    "pytest": "^7.0.0",
+    "pytest-asyncio": "^0.21.0",
+    "black": "^23.0.0",
+    "mypy": "^1.0.0",
+    "ruff": "^0.1.0"
+  },
+  "optionalDependencies": {
+    "cryptography": "^41.0.0",
+    "aiohttp": "^3.9.0"
+  },
+  "engines": {
+    "python": ">=3.10",
+    "node": ">=18"
+  },
+  "files": [
+    "gdrive_safety_suite/",
+    "gdrive_safety_cli.py",
+    "gdrive_safety_skill.md",
+    "requirements.txt",
+    "GDRIVE_SAFETY_INSTALLATION.md",
+    "GDRIVE_SAFETY_QUICKREF.md",
+    "README.md",
+    "LICENSE"
+  ],
+  "skillConfig": {
+    "name": "gdrive-safety",
+    "description": "Scan Google Drive for unusual file behaviors with privacy protection",
+    "commands": [
+      {
+        "name": "scan",
+        "description": "Scan a Google Drive folder for safety issues",
+        "usage": "claude gdrive:scan --folder-id FOLDER_ID [--max-depth 5]"
+      },
+      {
+        "name": "cleanup",
+        "description": "Cleanup session memory and cached data",
+        "usage": "claude gdrive:cleanup --session-id SESSION_ID --confirm"
+      },
+      {
+        "name": "report",
+        "description": "Generate audit report from scan results",
+        "usage": "claude gdrive:report --scan-results results.json"
+      }
+    ]
+  }
+}

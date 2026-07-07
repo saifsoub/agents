@@ -1,0 +1,24 @@
+# Google Drive Safety Suite - Requirements
+
+# Core dependencies
+google-auth-oauthlib>=1.0.0
+google-auth-httplib2>=0.2.0
+google-api-python-client>=2.100.0
+
+# CLI and utilities
+click>=8.1.0
+colorama>=0.4.6
+tabulate>=0.9.0
+
+# Development (optional)
+pytest>=7.0.0
+pytest-asyncio>=0.21.0
+black>=23.0.0
+mypy>=1.0.0
+ruff>=0.1.0
+
+# Security (optional, for encrypted audit logs)
+cryptography>=41.0.0
+
+# Async support (optional)
+aiohttp>=3.9.0
