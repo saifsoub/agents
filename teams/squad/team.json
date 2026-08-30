@@ -1,0 +1,88 @@
+{
+  "schema_version": "1.0.0",
+  "team_id": "s-squad",
+  "display_name": "S/Squad",
+  "team_type": "cross-functional-delivery",
+  "status": "registered_pending_passport_binding",
+  "upstream": {
+    "repository": "https://github.com/bradygaster/squad",
+    "release": "v0.13.1",
+    "license": "MIT",
+    "role": "execution_engine"
+  },
+  "work_domains": [
+    "business",
+    "research",
+    "operations",
+    "design",
+    "content",
+    "engineering",
+    "qa"
+  ],
+  "assignment": {
+    "entrypoints": [
+      "S/Agency capability router",
+      "Aria routing",
+      "GitHub S/Squad work request"
+    ],
+    "required_fields": [
+      "task_id",
+      "title",
+      "objective",
+      "work_domain",
+      "acceptance_criteria",
+      "priority"
+    ],
+    "routing_strategy": "domain_specialist_with_lead_and_qa_support"
+  },
+  "governance": {
+    "activation_requires_passport": true,
+    "owner": "S/Agency",
+    "policy_authority": "S/Agency OS",
+    "canonical_identity_source": "S/Agent Passport",
+    "canonical_memory_source": "Supabase",
+    "upstream_state_is_cache_only": true
+  },
+  "tracking": {
+    "canonical_store": "supabase",
+    "control_room_projection": "S/Agency OS / Teams / S/Squad",
+    "statuses": [
+      "queued",
+      "assigned",
+      "executing",
+      "qa_review",
+      "revision",
+      "completed",
+      "blocked",
+      "cancelled"
+    ],
+    "fields": [
+      "owner_seat",
+      "progress",
+      "current_stage",
+      "qa_loops",
+      "blocker",
+      "evidence_refs",
+      "updated_at"
+    ],
+    "performance_dimensions": [
+      "instruction_adherence",
+      "completion_rate",
+      "quality",
+      "reliability",
+      "efficiency"
+    ]
+  },
+  "seats": [
+    "team-lead",
+    "business-strategy",
+    "research-intelligence",
+    "operations-delivery",
+    "product-design",
+    "content-communications",
+    "engineering-integration",
+    "qa-evidence",
+    "scribe-progress"
+  ]
+}
+

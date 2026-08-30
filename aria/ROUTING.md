@@ -12,7 +12,21 @@ Define how Aria decides where work should go and which agent or team should hand
 - Send research to the research team.
 - Send creative output to the creative team.
 - Send technical or integration work to the engineering or systems layer.
+- Route cross-functional delivery, explicit `@S/Squad` requests, or work needing a rapidly composed specialist team to S/Squad.
 - Escalate decisions that affect brand, governance, ownership, or strategy.
+
+## S/Squad Assignment
+
+S/Squad is a distinct cross-functional team, not an engineering-only worker. It accepts business, research, operations, design, content, engineering, and QA assignments.
+
+When routing to S/Squad, create one work packet containing:
+- Task ID and outcome-focused title
+- Objective and work domain
+- Acceptance criteria and required evidence
+- Priority and delivery window
+- Approved sources and constraints
+
+Return its current stage, primary seat, progress percentage, QA loops, blockers, evidence references, and last update whenever Seif asks for progress.
 
 ## Decision Hierarchy
 1. Determine the user's actual intent.
