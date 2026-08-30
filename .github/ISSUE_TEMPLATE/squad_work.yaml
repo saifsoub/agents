@@ -1,0 +1,70 @@
+name: S/Squad work request
+description: Assign business, research, operations, design, content, engineering, or QA work to S/Squad.
+title: "[S/Squad] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This request becomes a governed S/Squad work packet. Do not include credentials or personal secrets.
+  - type: input
+    id: objective
+    attributes:
+      label: Objective
+      description: State the outcome, not the implementation steps.
+      placeholder: Produce an evidence-backed market entry recommendation.
+    validations:
+      required: true
+  - type: dropdown
+    id: domain
+    attributes:
+      label: Work domain
+      options:
+        - Business
+        - Research
+        - Operations
+        - Design
+        - Content and communications
+        - Engineering and integration
+        - QA and evidence
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: Define the evidence required to consider the outcome complete.
+      placeholder: |
+        - Sources are linked and dated
+        - Recommendation includes risks and next actions
+        - QA evidence is attached
+    validations:
+      required: true
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options:
+        - P0 — Immediate
+        - P1 — High
+        - P2 — Normal
+        - P3 — Background
+    validations:
+      required: true
+  - type: input
+    id: due
+    attributes:
+      label: Due date or service window
+      placeholder: 2026-09-01 or within 24 hours
+  - type: textarea
+    id: context
+    attributes:
+      label: Context and approved sources
+      description: Include relevant links, repositories, documents, and constraints.
+  - type: checkboxes
+    id: governance
+    attributes:
+      label: Governance confirmation
+      options:
+        - label: No credentials, private keys, or unapproved personal data are included.
+          required: true
+
